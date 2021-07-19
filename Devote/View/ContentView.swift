@@ -50,7 +50,7 @@ struct ContentView: View {
                     .padding()
                     .font(.headline)
                     .foregroundColor(.white)
-                    .background(isButtonDisable ? Color.gray2 : Color.pink)
+                    .background(isButtonDisable ? Color.gray : Color.pink)
                     .cornerRadius(10)
                 }) //: VSTACK
                 .padding()

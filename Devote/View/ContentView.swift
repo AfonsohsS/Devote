@@ -50,6 +50,7 @@ struct ContentView: View {
                     .padding()
                     .font(.headline)
                     .foregroundColor(.white)
+                    // Condicional para status do botão
                     .background(isButtonDisable ? Color.gray : Color.pink)
                     .cornerRadius(10)
                 }) //: VSTACK
@@ -73,22 +74,24 @@ struct ContentView: View {
             .navigationBarTitle("Daily Tasks", displayMode: .large)
             .toolbar {
                 #if os(iOS)
-                ToolbarItem(placement: .navigationBarLeading) {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
                 #endif
+//
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    Button(action: addItem) {
+//                        Label("Add Item", systemImage: "plus")
+//                    }
+//                }
                 
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
             } //: TOOLBAR
         } //: NAVIGATION
     }
 
     // MARK: - FUNCTIONS
     
+    //Função para adicionar item ao Context do CoreData
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
@@ -96,13 +99,17 @@ struct ContentView: View {
             newItem.task = task
             newItem.completion = false
             newItem.id = UUID()
-
+            
+            //Tratamento de erro ao salvar no context
             do {
                 try viewContext.save()
             } catch {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
+            
+            task = ""
+            hideKeyboard()
         }
     }
 

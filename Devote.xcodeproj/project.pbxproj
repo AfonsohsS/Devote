@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9456F6FB26A88BF800D96A7A /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9456F6FA26A88BF800D96A7A /* BackgroundImageView.swift */; };
 		949295CB26A7319700748305 /* HideKeyboard_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949295CA26A7319600748305 /* HideKeyboard_Ext.swift */; };
 		94978A54269E40B8007D70B2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94978A53269E40B8007D70B2 /* Constant.swift */; };
 		94B2E9F72699DC16007BC515 /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94B2E9F42699DC16007BC515 /* sound-ding.mp3 */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9456F6FA26A88BF800D96A7A /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		949295CA26A7319600748305 /* HideKeyboard_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard_Ext.swift; sourceTree = "<group>"; };
 		94978A53269E40B8007D70B2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		94B2E9F42699DC16007BC515 /* sound-ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-ding.mp3"; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				94E6057A2691FEFD00C06040 /* ContentView.swift */,
+				9456F6FA26A88BF800D96A7A /* BackgroundImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				949295CB26A7319700748305 /* HideKeyboard_Ext.swift in Sources */,
+				9456F6FB26A88BF800D96A7A /* BackgroundImageView.swift in Sources */,
 				94E605822691FF0300C06040 /* Persistence.swift in Sources */,
 				94E6057B2691FEFD00C06040 /* ContentView.swift in Sources */,
 				94978A54269E40B8007D70B2 /* Constant.swift in Sources */,

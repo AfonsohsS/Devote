@@ -16,7 +16,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showNewTaskItem: Bool = false
 //    @Environment(\.colorScheme) var colorScheme
-//    @AppStorage("isDarkMode") var isDarkMode: Bool = false
+    @AppStorage("isDarkMode") var isDarkMode: Bool = false
     
     // FETCHING DATA
 
@@ -78,13 +78,18 @@ struct ContentView: View {
                     .padding(.vertical, 0)
                     .frame(maxWidth: 640)
                 } //: VSTACK
+                // Blur effect quando a pop up view Add Item aparecer
+                .blur(radius: showNewTaskItem ? 8.0 : 0.0, opaque: false)
+                .transition(.move(edge: .bottom))
+                .animation(.easeOut(duration: 0.5))
                 
                 // MARK: - NEW TASK ITEM
                 
                 if showNewTaskItem {
                     
-                    //Apresenta uma view semitransparente quando a popup view aparecer
-                    BlankView()
+                    //Apresenta uma view modificada quando a popup view aparecer
+                    BlankView(backgroundColor: isDarkMode ? .black : .gray,
+                              backgroundOpacity: isDarkMode ? 0.3 : 0.5)
                         //Retira a blankview e a popupNewTaskItemView quando tocar em qualquer parte da tela.
                         .onTapGesture {
                             withAnimation {
@@ -103,7 +108,9 @@ struct ContentView: View {
             .navigationBarTitle("Daily Tasks", displayMode: .large)
             .navigationBarHidden(true)
             .background(
+                // MARK: - Background Image
                 BackgroundImageView()
+                    .blur(radius: showNewTaskItem ? 8.0 : 0.0, opaque: false)
             )
             .background(
                 backgroundGradient.ignoresSafeArea(.all)

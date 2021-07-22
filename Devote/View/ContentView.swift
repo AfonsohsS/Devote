@@ -15,6 +15,8 @@ struct ContentView: View {
     @State var task: String = ""
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showNewTaskItem: Bool = false
+//    @Environment(\.colorScheme) var colorScheme
+//    @AppStorage("isDarkMode") var isDarkMode: Bool = false
     
     // FETCHING DATA
 
@@ -24,8 +26,10 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
 
     // MARK: - BODY
+    
     var body: some View {
-        // Embed "List" em um novo container (NavigationView)
+        
+        
         NavigationView {
             ZStack {
                 
@@ -34,6 +38,8 @@ struct ContentView: View {
                 VStack {
                     
                     // MARK: - HEADER
+                    
+                    HeaderView()
                     
                     Spacer(minLength: 80)
                     
@@ -101,16 +107,10 @@ struct ContentView: View {
             //Remove o background da tableView
             .onAppear(perform: {
                 UITableView.appearance().backgroundColor = UIColor.clear
+                updateColorScheme()
             })
             .navigationBarTitle("Daily Tasks", displayMode: .large)
-            .toolbar {
-                #if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                #endif
-                
-            } //: TOOLBAR
+            .navigationBarHidden(true)
             .background(
                 BackgroundImageView()
             )
@@ -137,6 +137,17 @@ struct ContentView: View {
             }
         }
     }
+    
+//    private func updateColorScheme() {
+//
+//        switch colorScheme {
+//        case .dark: isDarkMode = true
+//        case .light: isDarkMode = false
+//        @unknown default:
+//            fatalError()
+//        }
+//
+//    }
 }
 
 

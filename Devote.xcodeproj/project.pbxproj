@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		940ECC5326A9A81A009E92D6 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940ECC5226A9A81A009E92D6 /* BlankView.swift */; };
+		940ECC5526A9C9ED009E92D6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940ECC5426A9C9ED009E92D6 /* HeaderView.swift */; };
 		9456F6FB26A88BF800D96A7A /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9456F6FA26A88BF800D96A7A /* BackgroundImageView.swift */; };
 		9456F6FD26A8954A00D96A7A /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9456F6FC26A8954A00D96A7A /* NewTaskItemView.swift */; };
 		949295CB26A7319700748305 /* HideKeyboard_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949295CA26A7319600748305 /* HideKeyboard_Ext.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		940ECC5226A9A81A009E92D6 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
+		940ECC5426A9C9ED009E92D6 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		9456F6FA26A88BF800D96A7A /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		9456F6FC26A8954A00D96A7A /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
 		949295CA26A7319600748305 /* HideKeyboard_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard_Ext.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				9456F6FA26A88BF800D96A7A /* BackgroundImageView.swift */,
 				9456F6FC26A8954A00D96A7A /* NewTaskItemView.swift */,
 				940ECC5226A9A81A009E92D6 /* BlankView.swift */,
+				940ECC5426A9C9ED009E92D6 /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				94E605822691FF0300C06040 /* Persistence.swift in Sources */,
 				94E6057B2691FEFD00C06040 /* ContentView.swift in Sources */,
 				940ECC5326A9A81A009E92D6 /* BlankView.swift in Sources */,
+				940ECC5526A9C9ED009E92D6 /* HeaderView.swift in Sources */,
 				94978A54269E40B8007D70B2 /* Constant.swift in Sources */,
 				94E605852691FF0300C06040 /* Devote.xcdatamodeld in Sources */,
 				94E605792691FEFD00C06040 /* DevoteApp.swift in Sources */,

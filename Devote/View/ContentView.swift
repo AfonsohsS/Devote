@@ -66,15 +66,7 @@ struct ContentView: View {
                     
                     List {
                         ForEach(items) { item in
-                            VStack(alignment: .leading) {
-                                Text(item.task ?? "")
-                                    .font(.headline)
-                                    .fontWeight(.bold)
-                                
-                                Text("\(item.timestamp!, formatter: itemFormatter)")
-                                    .font(.footnote)
-                                    .foregroundColor(.gray)
-                            } //: LIST ITEM
+                            ListRowItemView(item: item)
                         }
                         .onDelete(perform: deleteItems)
                     } //: LIST
@@ -107,7 +99,6 @@ struct ContentView: View {
             //Remove o background da tableView
             .onAppear(perform: {
                 UITableView.appearance().backgroundColor = UIColor.clear
-                updateColorScheme()
             })
             .navigationBarTitle("Daily Tasks", displayMode: .large)
             .navigationBarHidden(true)

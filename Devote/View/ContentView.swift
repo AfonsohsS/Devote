@@ -40,13 +40,13 @@ struct ContentView: View {
                     // MARK: - HEADER
                     
                     HeaderView()
-                    
                     Spacer(minLength: 80)
                     
                     // MARK: - NEW TASK BUTTON
                     
                     Button(action: {
                         showNewTaskItem = true
+                        playSound(sound: "sound-ding", type: "mp3")
                     }, label: {
                         Image(systemName: "plus.circle")
                             .font(.system(size: 30, weight: .semibold, design: .rounded))
@@ -92,9 +92,11 @@ struct ContentView: View {
                               backgroundOpacity: isDarkMode ? 0.3 : 0.5)
                         //Retira a blankview e a popupNewTaskItemView quando tocar em qualquer parte da tela.
                         .onTapGesture {
+                            playSound(sound: "sound-tap", type: "mp3")
                             withAnimation {
                                 showNewTaskItem = false
                             }
+                            
                         }
                     
                     NewTaskItemView(isShowing: $showNewTaskItem)

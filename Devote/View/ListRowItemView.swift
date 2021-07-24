@@ -21,8 +21,8 @@ struct ListRowItemView: View {
     var body: some View {
         Toggle(isOn: $item.completion, label: {
             Text(item.task ?? "")
-                .font(.system(.title2, design: .rounded))
-                .fontWeight(.heavy)
+                .font(.system(size: 22, weight: .semibold, design: .rounded))
+                .fontWeight(.semibold)
                 .foregroundColor(item.completion ? Color.pink : Color.primary)
                 .padding(.vertical, 12)
                 .animation(.default)

@@ -29,7 +29,7 @@ struct NewTaskItemView: View {
             VStack(alignment: .center, spacing: 16, content: {
                 TextField("New Task", text: $task)
                     .foregroundColor(.pink)
-                    .font(.system(size: 24, weight: .bold, design: .rounded))
+                    .font(.system(size: 22, weight: .semibold, design: .rounded))
                     .padding()
                     .background(
                         isDarkMode ? Color(UIColor.tertiarySystemBackground) : Color(UIColor.secondarySystemBackground)
